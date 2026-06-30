@@ -361,60 +361,10 @@
     .hero-img-placeholder {
       width: 100%;
       height: 100%;
-      background:
-        linear-gradient(170deg, #1a2e52 0%, #0a1628 40%, #0E1C36 100%);
+      background: url('images/hero_luxury.png') no-repeat center center;
+      background-size: cover;
       position: relative;
       overflow: hidden;
-    }
-
-    /* Stylised building silhouette via CSS */
-    .hero-img-placeholder::before {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 50%;
-      transform: translateX(-50%);
-      width: 140%;
-      height: 80%;
-      background:
-        /* Windows grid */
-        repeating-linear-gradient(
-          90deg,
-          transparent 0px, transparent 18px,
-          rgba(181,146,76,0.15) 18px, rgba(181,146,76,0.15) 20px
-        ),
-        repeating-linear-gradient(
-          0deg,
-          transparent 0px, transparent 28px,
-          rgba(181,146,76,0.1) 28px, rgba(181,146,76,0.1) 30px
-        ),
-        linear-gradient(180deg, transparent 0%, #1a2e52 60%, #0d1b33 100%);
-      clip-path: polygon(
-        5% 100%, 5% 40%,
-        10% 40%, 10% 20%,
-        15% 20%, 15% 40%,
-        30% 40%, 30% 10%,
-        35% 10%, 35% 40%,
-        45% 40%, 45% 30%,
-        50% 30%, 50% 40%,
-        55% 40%, 55% 15%,
-        62% 15%, 62% 40%,
-        70% 40%, 70% 25%,
-        78% 25%, 78% 40%,
-        85% 40%, 85% 50%,
-        90% 50%, 90% 40%,
-        95% 40%, 95% 100%
-      );
-    }
-    .hero-img-placeholder::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 35%;
-      background: linear-gradient(180deg,
-        transparent 0%,
-        rgba(181,146,76,0.05) 40%,
-        rgba(181,146,76,0.12) 100%
-      );
     }
 
     .hero-img-badge {
@@ -509,40 +459,21 @@
       aspect-ratio: 4/3;
       position: relative;
       overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
-    /* Gradient placeholder images */
     .card-img-1 {
-      background:
-        linear-gradient(145deg, #1a3a5c 0%, #2d5a8e 40%, #1e4a7a 70%, #0e2a4a 100%);
+      background-image: url('images/mumbai_penthouse.png');
     }
     .card-img-2 {
-      background:
-        linear-gradient(145deg, #2a1a3e 0%, #4a2d6e 40%, #3a1e5a 70%, #1a0e2a 100%);
+      background-image: url('images/delhi_mansion.png');
     }
     .card-img-3 {
-      background:
-        linear-gradient(145deg, #1a3a2a 0%, #2d5e3e 40%, #1e4a30 70%, #0e2a18 100%);
+      background-image: url('images/bangalore_villa.png');
     }
 
-    /* Building silhouette on cards */
-    .card-img::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0; right: 0;
-      height: 60%;
-      background: inherit;
-      filter: brightness(0.5);
-      clip-path: polygon(
-        0% 100%, 0% 55%, 8% 55%, 8% 30%, 16% 30%, 16% 55%,
-        28% 55%, 28% 15%, 34% 15%, 34% 55%,
-        48% 55%, 48% 35%, 55% 35%, 55% 55%,
-        64% 55%, 64% 20%, 72% 20%, 72% 55%,
-        82% 55%, 82% 40%, 90% 40%, 90% 55%,
-        100% 55%, 100% 100%
-      );
-    }
     .card-img::after {
       content: '';
       position: absolute;
@@ -860,7 +791,8 @@
     .process-visual {
       width: 100%;
       aspect-ratio: 4/5;
-      background: linear-gradient(145deg, #f0ece4, #e8e2d8);
+      background: url('images/elegant_interior.png') no-repeat center center;
+      background-size: cover;
       position: relative;
       overflow: hidden;
     }
@@ -872,35 +804,7 @@
       height: calc(100% - 2rem);
       border: 1.5px solid var(--gold);
       opacity: 0.35;
-    }
-
-    /* Interior scene gradient */
-    .process-visual::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse at 30% 70%, rgba(181,146,76,0.15) 0%, transparent 60%),
-        linear-gradient(145deg,
-          rgba(240, 236, 228, 1) 0%,
-          rgba(200, 190, 175, 1) 50%,
-          rgba(165, 148, 118, 1) 100%
-        );
-    }
-
-    /* Floor lines */
-    .pv-floor {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 40%;
-      z-index: 1;
-      background:
-        repeating-linear-gradient(
-          90deg,
-          rgba(181,146,76,0.07) 0px, rgba(181,146,76,0.07) 1px,
-          transparent 1px, transparent 80px
-        ),
-        linear-gradient(180deg, transparent, rgba(181,146,76,0.08));
+      z-index: 2;
     }
 
     .process-badge {
@@ -1639,9 +1543,7 @@
       </div>
 
       <div class="process-right reveal">
-        <div class="process-visual" role="img" aria-label="Elegant interior room illustration">
-          <div class="pv-floor"></div>
-        </div>
+        <div class="process-visual" role="img" aria-label="Elegant interior room illustration"></div>
         <div class="process-badge">
           <div class="badge-label">Avg. Time to Close</div>
           <div class="badge-val">28 Days</div>
